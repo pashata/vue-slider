@@ -1,0 +1,49 @@
+.starter-slider {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  &__inner {
+    height: 100%;
+
+    transition: transform 0.5s ease-in-out;
+
+    &--horizontal {
+      white-space: nowrap;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    &--horizontal {
+      bottom: 1rem;
+      left: 0;
+      width: 100%;
+    }
+
+    &--vertical {
+      right: 1rem;
+      top: 0;
+      height: 100%;
+      flex-direction: column;
+    }
+  }
+
+  &__pagination-item {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid hsla(0,0%,48%,.77);
+    border-radius: 50%;
+
+    &--active {
+      border-color: rgba(251,9,48,.8);
+    }
+  }
+}
